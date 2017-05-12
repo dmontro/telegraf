@@ -124,8 +124,7 @@ func (e *Exec) Write(metrics []telegraf.Metric) error {
 			return err
 		}
 		for _, value := range values {
-			buffer.WriteString(value)
-			buffer.WriteString("\n")
+			buffer.WriteString(string(value))
 		}
 	}
 
